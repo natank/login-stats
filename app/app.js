@@ -10,6 +10,11 @@ connectDB();
 
 const app = express();
 
+app.use((req, res, next) => {
+	console.log('requst arrived');
+	next();
+});
+
 app.use(cors());
 
 /**
